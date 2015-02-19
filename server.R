@@ -42,6 +42,7 @@ shinyServer(
       isolate({
         if (input$goButton >0) {
           barplot(vect(), xlab="Number", ylab="Value")
+          abline(h=dataValue(), col="red")
           title("Barplot of your numbers")
         }
       })
